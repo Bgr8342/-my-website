@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Video with Image</title>
+    <style>
+        .content-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        .video-wrapper {
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            flex: 1;
+            min-width: 300px; /* Ensure the video doesn't get too small */
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .single-image-wrapper {
+            flex: 1;
+            min-width: 300px; /* Ensure the image doesn't get too small */
+        }
+        .image-wrapper {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column; /* Vertically stack images */
+            gap: 20px; /* Space between images */
+        }
+        .image-wrapper img, .single-image-wrapper img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Introduction</h1>
+    <p>The Great Green Wall of Africa</p>
+    <p>Why is Africa building a great green wall?</p>
+    <p>Video below:</p>
+    <!-- First Video with Images Next to It -->
+    <div class="content-wrapper">
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/s3qXQkAc3D0?si=yYn9qdDOZKCEkRu4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="image-wrapper">
+            <img src="./img0.png" alt="Image description">
+            <img src="./img1.png" alt="Image description">
+        </div>
+    </div>
+
+    <!-- Second Video with Images -->
+    <br><br><br>
+    <div class="content-wrapper">
+        <div class="single-image-wrapper">
+            <img src="./img2.png" alt="Image description">
+            <br><br><br><br><br>
+            <br><br><h1>Some pictures to show :</h1>
+        </div>
+        <div class="image-wrapper">
+            <img src="./img3.png" alt="Image description">
+            <img src="./img4.png" alt="Image description">
+        </div>
+    </div>
+
+    <h1>BBC YouTube Video</h1>
+    <div class="video-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/4xls7K_xFBQ?si=Lt3ckczYBc4Gggj7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    
+</body>
+</html>
+
+
+
